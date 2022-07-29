@@ -52,7 +52,7 @@ public class Source {
     }
 
     public String getCode() {
-        return code;
+        return funcionReemplazarEspacios(code.toLowerCase());
     }
 
     public void setCode(String code) {
@@ -130,5 +130,7 @@ public class Source {
                 + name + "]";
     }
 
-   
+    public static String funcionReemplazarEspacios(String code) {
+        return code.replace(" ", "-");
+    }
 }
